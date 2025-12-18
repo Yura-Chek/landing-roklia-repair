@@ -1,0 +1,151 @@
+:root {
+  --primary: #0f4c81;
+  --accent: #f59e0b;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+section {
+  padding: 32px 16px;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+h1,
+h2 {
+  margin-bottom: 16px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary), #1e3a8a);
+  color: var(--white);
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  margin-top: 14px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 16px 28px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* BENEFITS */
+.benefits {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.benefits.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.benefit {
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form-box {
+  margin-top: 40px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
+}
+
+.form-box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input,
+textarea {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+button.submit {
+  margin-top: 10px;
+  padding: 16px;
+  font-size: 1.1rem;
+  border-radius: 14px;
+  border: none;
+  background: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

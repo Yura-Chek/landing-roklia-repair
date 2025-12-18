@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ремонт роклів для складів</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <h1>Ремонт роклів для складів та бізнесу</h1>
+        <p>
+          Швидко відновимо гідравлічні візки. Виїзд на склад або ремонт у
+          майстерні.
+        </p>
+        <button
+          onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})"
+        >
+          Залишити заявку
+        </button>
+      </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section>
+      <div class="container">
+        <div class="benefits animate">
+          <h2>Чому нам довіряють</h2>
+          <div class="benefit">
+            ✔ Ремонт для складів, магазинів та логістики
+          </div>
+          <div class="benefit">
+            ✔ Оперативне обслуговування без простою роботи
+          </div>
+          <div class="benefit">✔ Досвід з різними моделями роклів</div>
+          <div class="benefit">✔ Чесна ціна та консультація</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section id="form">
+      <div class="container">
+        <div class="form-box animate">
+          <h2>Залишити заявку на ремонт</h2>
+
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="7bf2a701-babc-457e-85be-417adc09b53f"
+            />
+            <input type="checkbox" name="botcheck" style="display: none" />
+
+            <input type="text" name="name" placeholder="Імʼя" required />
+            <input type="text" name="company" placeholder="Назва компанії" />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Номер телефону"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Опишіть проблему з роклею"
+            ></textarea>
+
+            <button class="submit" type="submit">Надіслати заявку</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const blocks = document.querySelectorAll(".animate");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      blocks.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
