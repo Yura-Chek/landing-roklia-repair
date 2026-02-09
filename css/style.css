@@ -8,7 +8,7 @@
       /* 🔥 ФОН САЙТУ */
       background:
         linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url(".//ziemos-fonas-1920.jpg") center / cover no-repeat;
+        url("../ziemos-fonas-1920.jpg") center / cover no-repeat;
 
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -82,4 +82,5 @@
       color: #777;
       text-align: center;
     }
+
 
