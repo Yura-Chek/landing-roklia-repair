@@ -51,7 +51,10 @@
       <img src="./Moya-shkola-2x.png" alt="Логотип" />
       Навчальний портал
     </div>
-      <h2>Вхід до системи</h2>
+       <div class="login-header">
+      <h2>Вхід</h2>
+      <a href="#" class="register">Реєстрація нових користувачів</a>
+    </div>
           <form action="https://api.web3forms.com/submit" method="POST">
             <input
               type="hidden"
@@ -59,9 +62,20 @@
               value="7bf2a701-babc-457e-85be-417adc09b53f"
             />
             <input type="checkbox" name="botcheck" style="display: none" />
+    <div class="field">
+        <input type="text" name="name" placeholder="Логін" required>
+      </div>
 
-            <input type="text" name="name" placeholder="Імʼя" required />
-            <input type="text" name="company" placeholder="Пароль" />
+      <div class="field">
+        <input type="password" name="company" placeholder="Пароль" required>
+      </div>
+
+      <div class="form-footer">
+        <a href="#" class="forgot">Нагадати пароль</a>
+        <button type="submit">ПІДКЛЮЧИТИСЯ</button>
+      </div>
+            <!-- <input type="text" name="name" placeholder="Імʼя" required /> -->
+            <!-- <input type="text" name="company" placeholder="Пароль" /> -->
             <!-- <input
               type="tel"
               name="phone"
@@ -73,7 +87,7 @@
               placeholder="Опишіть проблему з роклею"
             ></textarea> -->
 
-            <button class="submit" type="submit">ПІДКЛЮЧИТИСЯ</button>
+            <!-- <button class="submit" type="submit">ПІДКЛЮЧИТИСЯ</button> -->
           </form>
       <div class="note">
       ⚠ Демонстраційний приклад.<br>
@@ -102,6 +116,7 @@
     </script>
   </body>
 </html>
+
 
 
 
