@@ -115,8 +115,10 @@ button:hover {
 /* ПРИМІТКА */
 .note {
   margin-top: 18px;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: bold;
   color: #777;
   text-align: center;
 }
+
 
